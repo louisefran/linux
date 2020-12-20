@@ -1,0 +1,126 @@
+===[Lệnh di chuyển, liệt kê trong Kali Linux]===
+pwd	|| hiển thị tên thư mục đang làm việc.
+
+cd	|| di chuyển sang thư mục home của người dùng.
+cd ~/Desktop	|| di chuyển sang thư mục Desktop của người dùng.
+cd ..	|| di chuyển sang thư mục cha của thư mục hiện hành.
+cd /usr/apt	|| di chuyển sang thư mục /usr/apt.
+
+ls -l folder  ||
+dir -l folder ||	liệt kê chi tiết các tập tin và thư mục trong thư mục hiện hành, hoặc thư mục folder.
+ls -a folder  ||
+dir -a folder	||  liệt kê tất cả tập tin và thư mục (kể cả ẩn) trong thư mục hiện hành, hoặc thư mục folder.
+ls -d folder  ||
+dir -d folder	||  liệt kê các thư mục trong thư mục hiện hành, hoặc thư mục folder.
+ls -t folder  ||  
+dir -t folder	||  liệt kê các tập tin và thư mục trong thư mục hiện hành, hoặc thư mục folder, sau đó sắp xếp lại theo ngày, gần nhất xếp ở trên rồi mới hiển thị ra.
+ls -S folder  ||
+dir -S folder	||  liệt kê các tập tin và thư mục trong thư mục hiện hành, hoặc trong thư mục folder, sau đó sắp xếp theo kích thước, lớn nhất xếp ở trên rồi mới hiển thị ra.
+ls folder | more	|| liệt kê các tập tin và thư mục trong thư mục hiện hành, hoặc trong thư mục folder và hiển thị theo từng trang.
+
+===[Phân quyền truy cập tập tin]===
+chown user file	|| xác định người sở hữu tập tin file là user.
+chown -R    ||
+userfolder	|| xác định người sở hữu thư mục folder là user.
+chgrp group file	|| xác định nhóm người sở hữu tập tin file.
+chmod u+x file	||  cấp quyền (+) thực thi (x) tập tin file cho người dùng (u) sở hữu.
+chmod g-w file	||  thu quyền (-) ghi (w) tập tin file cho nhóm người dùng (g) sở hữu.
+chmod o-r file	||  thu quyền (-) đọc (r) tập tin file cho người dùng khác (o).
+chmod a+rw file	||  cấp quyền (+) đọc (r) và ghi (w) tập tin file cho toàn bộ người dùng (a).
+chmod -R a+rw ||
+folder	      ||  cấp quyền (+) đọc (r) và ghi (w) thư mục folder và các thư và tập tin con cho toàn bộ người dùng (a).
+
+===[Lệnh Kali Linux thao tác với tập tin và thư mục]===
+cp file1 file2	||  chép tập tin file1 sang tên mới file2.
+copy file folder	||  chép tập tin file vào thư mục folder và giữ nguyên tên.
+
+cp -r folder1 folder2   ||
+rsync -a                ||
+folder1folder2	        ||  chép thư mục folder1 và các thư mục tập tin con sang thư mục mới folder2.
+
+mv file1 file2	||  di chuyển tập tin file1 sang tên mới file2.
+mv folder1 folder2	||  di chuyển thư mục folder1 sang tên mới folder2.
+mv file folder	||  di chuyển tập tin file vào thư mục folder và giữ nguyên tên.
+mv file1 folderfile2	||  di chuyển tập tin file vào thư mục folder và đổi tên thành file2.
+
+mkdir folder	||  tạo ra thư mục folder.
+mkdir -p 
+folder1folder2	||  tạo ra thư mục folder1 và thư mục folder2 (nếu chưa có).
+
+rm file	||  xóa tập tin file.
+rmdir folder	||  xóa thư mục trống folder.
+rm -rf folder	||  xóa thư mục folder và các thư mục tập tin con (rf).
+
+ln -s file || link	tạo liên kết (shortcut) link dẫn đến file.
+
+find folder -name file	||  tìm tập tin file trong thư mục folder và các thư mục con.
+
+diff file file	||  so sánh nội dung hai tập tin hoặc hai thư mục.
+
+===[Lệnh Kali Linux làm việc với nội dung tập tin]===
+cat file	||  xuất toàn bộ nội dung tập tin file lên màn hình Terminal.
+more file	||  xuất nội dung tập tin file theo từng trang, Enter xuống một dòng, Space xuống một trang và q để thoát.
+less file	||  xuất nội dung tập tin file, giống như lệnh more nhưng có thể sử dụng nút Page Down.
+grep text file	||  xuất các dòng có chứa đoạn text trong tập tin file.
+
+head -n file	||  hiển thị n dòng đầu của tập tin file.
+tail -n file	||  hiển thị n dòng cuối của tập tin file.
+
+vi file	||  soạn tập tin file bằng trình soạn thảo vi.
+nano file	||  soạn tập tin file bằng trình soạn thảo nano.
+gedit file	||  soạn tập tin file bằng trình soạn thảo gedit.
+
+grep -r     ||
+textfolder  ||	tìm đoạn text trong tất cả tập tin trong thư mục folder.
+
+command > file	||  ghi kết quả xuất ra Terminal của lệnh command vào tập tin file.
+command>> file	||  ghi kết quả xuất ra Terminal của lệnh command vào cuối tập tin file.
+
+===[Lệnh Kali Linux hệ thống cơ bản]===
+sudo command	||  thực hiện lệnh command bằng quyền superuser.
+gksudo command	||  tuơng tự lệnh sudo nhưng dùng cho các ứng dụng GUI.
+sudo -k	||  ngưng các tiến trình với quyền superuser.
+
+uname -r	||  hiển thị phiên bản kernel đang sử dụng.
+lsusb   ||
+lspci	  || liệt kê các thiết bị usb hoặc pci đang kết nối. 
+
+shutdown -r now	||  lập tức tắt và khởi động lại (reboot).
+
+time command	||  cho biết thời gian thực hiện lệnh command.
+command1 | command2	||  chuyển kết quả của command1 làm đầu vào của command2
+
+===[Lệnh Kali Linux điều khiển tiến trình]===
+ps -ef	||  hiển thị tất cả tiến trình đã được thực hiện (pid et ppid).
+ps aux	||  hiển thị chi tiết các tiến trình.
+ps aux | grep soft	||  hiển thị chi tiết các tiến trình liên quan đến chương trình soft.
+
+kill pid	||  tắt tiến trình pid.
+xkill	||  tắt tiến trình GUI.
+
+===[Lệnh Kali Linux làm việc với mạng máy tính]===
+/etc/network/interfaces ||  file cấu hình network interface.
+uname -a  ||
+hostname	||  hiển thị tên của máy tính trong mạng (hostname).
+ping address	|| Ping đến địa chỉ mạng address.
+
+ifconfig -a	||  hiển thị thông tin các card mạng hiện có.
+ifconfig interface ip-address	||  xác định địa chỉ ip tĩnh cho card mạng chỉ định.
+ifdown interface        ||
+ifconfig interface down	||  ngưng hoạt động card mạng chỉ định.
+ifup pid              ||
+ifconfig interface up	||  khởi động card mạng chỉ định.
+
+route add default gw ip-address	||  xác định địa chỉ gateway mặc định.
+route del default	||  bỏ địa chỉ gateway mặc định.
+
+===[Lệnh Kali Linux phân vùng ổ cứng]===
+/etc/fstab	||  tập tin chứa thông tin về các ổ cứng và hệ thống tập tin được gắn tự động.
+
+fdisk -l	||  liệt kê các ổ cứng và phân vùng hiện tại.
+fdisk /dev/hda1	||  thay đổi ổ cứng hda1.
+
+mkfs.ext3 /dev/hda1	||  tạo hệ thống tập tin ext3 trên ổ cứng hda1.
+mkfs.vfat /dev/hda1 ||	tạo hệ thống tập tin fat32 trên ổ cứng hda1.
+
+@quangtrimang
