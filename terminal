@@ -1,4 +1,4 @@
-===[Lệnh di chuyển, liệt kê trong Kali Linux]===
+===[Lệnh di chuyển, liệt kê trong Kali Linux]==================================================================================================================================
 pwd	|| hiển thị tên thư mục đang làm việc.
 
 cd	|| di chuyển sang thư mục home của người dùng.
@@ -18,7 +18,7 @@ ls -S folder  ||
 dir -S folder	||  liệt kê các tập tin và thư mục trong thư mục hiện hành, hoặc trong thư mục folder, sau đó sắp xếp theo kích thước, lớn nhất xếp ở trên rồi mới hiển thị ra.
 ls folder | more	|| liệt kê các tập tin và thư mục trong thư mục hiện hành, hoặc trong thư mục folder và hiển thị theo từng trang.
 
-===[Phân quyền truy cập tập tin]===
+===[Phân quyền truy cập tập tin]================================================================================================================================================
 chown user file	|| xác định người sở hữu tập tin file là user.
 chown -R    ||
 userfolder	|| xác định người sở hữu thư mục folder là user.
@@ -30,7 +30,7 @@ chmod a+rw file	||  cấp quyền (+) đọc (r) và ghi (w) tập tin file cho 
 chmod -R a+rw ||
 folder	      ||  cấp quyền (+) đọc (r) và ghi (w) thư mục folder và các thư và tập tin con cho toàn bộ người dùng (a).
 
-===[Lệnh Kali Linux thao tác với tập tin và thư mục]===
+===[Lệnh Kali Linux thao tác với tập tin và thư mục]============================================================================================================================
 cp file1 file2	||  chép tập tin file1 sang tên mới file2.
 copy file folder	||  chép tập tin file vào thư mục folder và giữ nguyên tên.
 
@@ -57,7 +57,11 @@ find folder -name file	||  tìm tập tin file trong thư mục folder và các 
 
 diff file file	||  so sánh nội dung hai tập tin hoặc hai thư mục.
 
-===[Lệnh Kali Linux làm việc với nội dung tập tin]===
+bzip2	||  Nén hoặc giải nén file được đặt tên.
+gzip	||  Nén hoặc giải nén các file được đặt tên.
+tar	  ||  Nén hoặc giải nén file .tar
+
+===[Lệnh Kali Linux làm việc với nội dung tập tin]==============================================================================================================================
 cat file	||  xuất toàn bộ nội dung tập tin file lên màn hình Terminal.
 more file	||  xuất nội dung tập tin file theo từng trang, Enter xuống một dòng, Space xuống một trang và q để thoát.
 less file	||  xuất nội dung tập tin file, giống như lệnh more nhưng có thể sử dụng nút Page Down.
@@ -76,7 +80,7 @@ textfolder  ||	tìm đoạn text trong tất cả tập tin trong thư mục fol
 command > file	||  ghi kết quả xuất ra Terminal của lệnh command vào tập tin file.
 command>> file	||  ghi kết quả xuất ra Terminal của lệnh command vào cuối tập tin file.
 
-===[Lệnh Kali Linux hệ thống cơ bản]===
+===[Lệnh Kali Linux hệ thống cơ bản]============================================================================================================================================
 sudo command	||  thực hiện lệnh command bằng quyền superuser.
 gksudo command	||  tuơng tự lệnh sudo nhưng dùng cho các ứng dụng GUI.
 sudo -k	||  ngưng các tiến trình với quyền superuser.
@@ -90,7 +94,7 @@ shutdown -r now	||  lập tức tắt và khởi động lại (reboot).
 time command	||  cho biết thời gian thực hiện lệnh command.
 command1 | command2	||  chuyển kết quả của command1 làm đầu vào của command2
 
-===[Lệnh Kali Linux điều khiển tiến trình]===
+===[Lệnh Kali Linux điều khiển tiến trình]======================================================================================================================================
 ps -ef	||  hiển thị tất cả tiến trình đã được thực hiện (pid et ppid).
 ps aux	||  hiển thị chi tiết các tiến trình.
 ps aux | grep soft	||  hiển thị chi tiết các tiến trình liên quan đến chương trình soft.
@@ -98,7 +102,7 @@ ps aux | grep soft	||  hiển thị chi tiết các tiến trình liên quan đ�
 kill pid	||  tắt tiến trình pid.
 xkill	||  tắt tiến trình GUI.
 
-===[Lệnh Kali Linux làm việc với mạng máy tính]===
+===[Lệnh Kali Linux làm việc với mạng máy tính]=================================================================================================================================
 /etc/network/interfaces ||  file cấu hình network interface.
 uname -a  ||
 hostname	||  hiển thị tên của máy tính trong mạng (hostname).
@@ -114,7 +118,7 @@ ifconfig interface up	||  khởi động card mạng chỉ định.
 route add default gw ip-address	||  xác định địa chỉ gateway mặc định.
 route del default	||  bỏ địa chỉ gateway mặc định.
 
-===[Lệnh Kali Linux phân vùng ổ cứng]===
+===[Lệnh Kali Linux phân vùng ổ cứng]===========================================================================================================================================
 /etc/fstab	||  tập tin chứa thông tin về các ổ cứng và hệ thống tập tin được gắn tự động.
 
 fdisk -l	||  liệt kê các ổ cứng và phân vùng hiện tại.
@@ -122,5 +126,6 @@ fdisk /dev/hda1	||  thay đổi ổ cứng hda1.
 
 mkfs.ext3 /dev/hda1	||  tạo hệ thống tập tin ext3 trên ổ cứng hda1.
 mkfs.vfat /dev/hda1 ||	tạo hệ thống tập tin fat32 trên ổ cứng hda1.
+
 
 @quangtrimang
