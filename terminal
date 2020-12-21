@@ -43,6 +43,9 @@ mv folder1 folder2	||  di chuyển thư mục folder1 sang tên mới folder2.
 mv file folder	||  di chuyển tập tin file vào thư mục folder và giữ nguyên tên.
 mv file1 folderfile2	||  di chuyển tập tin file vào thư mục folder và đổi tên thành file2.
 
+touch 
+cat     || Tạo tập tin.
+
 mkdir folder	||  tạo ra thư mục folder.
 mkdir -p 
 folder1folder2	||  tạo ra thư mục folder1 và thư mục folder2 (nếu chưa có).
