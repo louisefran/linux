@@ -131,4 +131,4 @@ mkfs.ext3 /dev/hda1	||  tạo hệ thống tập tin ext3 trên ổ cứng hda1.
 mkfs.vfat /dev/hda1 ||	tạo hệ thống tập tin fat32 trên ổ cứng hda1.
 
 
-@quangtrimang
+quangtrimang
