@@ -1,3 +1,3 @@
-sudo apt-get install catimg | Trình đọc ảnh trong terminal catimg.
+sudo apt-get install catimg || Trình đọc ảnh trong terminal catimg.
 
-sudo apt-get install fim |  Trình đọc ảnh trong terminal fim.
+sudo apt-get install fim ||  Trình đọc ảnh trong terminal fim.
